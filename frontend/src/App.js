@@ -13,7 +13,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://rickandmortyapi.com/api/character/?page=2')
+    fetch('https://wger.de/api/v2/exerciseinfo?language=2', {
+      method: "GET",
+      headers: {
+        "Authorization": "Token e3d5c86b1a79d3bb902b6a31376c627c16c46145"
+      }
+    })
       .then(response => response.json())
       .then(({ results }) => {
           this.setState({exercises: results})
