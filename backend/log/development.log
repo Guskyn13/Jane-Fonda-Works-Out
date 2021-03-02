@@ -282,3 +282,42 @@ Processing by UsersController#create as JSON
 Completed 200 OK in 16ms (Views: 2.2ms | ActiveRecord: 5.9ms | Allocations: 2750)
 
 
+Started GET "/exer" for ::1 at 2021-03-02 14:20:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/exer"):
+  
+Started GET "/exercises" for ::1 at 2021-03-02 14:21:11 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (1.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 54ms (Views: 28.0ms | ActiveRecord: 2.6ms | Allocations: 8293)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 14:21:34 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.5ms | Allocations: 3659)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 14:22:21 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 193ms (Views: 191.7ms | ActiveRecord: 0.4ms | Allocations: 3642)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 14:22:43 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 3641)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 14:23:02 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 3658)
+
+
