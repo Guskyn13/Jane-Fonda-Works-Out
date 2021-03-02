@@ -845,3 +845,36 @@ Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 1327)
 Started POST "/favorites" for ::1 at 2021-03-02 15:51:35 -0700
 Processing by FavoritesController#create as JSON
   Parameters: {"exercise_id"=>82, "favorite"=>{"exercise_id"=>82}}
+Completed 500 Internal Server Error in 110084ms (ActiveRecord: 0.0ms | Allocations: 82507)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/favorites_controller.rb:15:in `create'
+Started POST "/favorites" for ::1 at 2021-03-02 15:53:26 -0700
+Started POST "/favorites" for ::1 at 2021-03-02 15:53:26 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"exercise_id"=>83, "favorite"=>{"exercise_id"=>83}}
+Processing by FavoritesController#create as JSON
+  Parameters: {"exercise_id"=>84, "favorite"=>{"exercise_id"=>84}}
+Completed 500 Internal Server Error in 2834ms (ActiveRecord: 0.0ms | Allocations: 34523)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/favorites_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 1395ms (ActiveRecord: 0.0ms | Allocations: 2258216)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/favorites_controller.rb:15:in `create'
