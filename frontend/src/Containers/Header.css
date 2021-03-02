@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 40px 20px;
+    padding: 40px 60px;
     background-image: url('../assets/80s-theme-01.png');
     background-position: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Audiowide', cursive;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 0px 10px #f31dbd;
+    font-size: 56px;
 }
