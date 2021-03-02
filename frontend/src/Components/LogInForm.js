@@ -1,6 +1,7 @@
 import { Component } from 'react'
 
 import './LoginForm.css'
+const backendURL = 'http://localhost:3000'
 
 class LogInForm extends Component {
 
@@ -10,8 +11,39 @@ class LogInForm extends Component {
         sign_up: false
     }
 
+    
+
     handleSubmit = (event) => {
         event.preventDefault()
+        if (this.state.sign_up){
+            fetch(`${backendURL}/users`, {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    username: this.state.username,
+                    password: this.state.password
+                })
+            })
+            .then(response => response.json())
+            .then(console.log)
+        } else {
+            fetch(`${backendURL}/login`, {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    username: this.state.username,
+                    password: this.state.password
+                })
+            })
+            .then(response => response.json())
+            .then(console.log)
+        }
     }
 
     handleChange = (event) => {
