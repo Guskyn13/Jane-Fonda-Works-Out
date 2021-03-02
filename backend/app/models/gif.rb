@@ -1,2 +1,0 @@
-class Gif < ApplicationRecord
-end
