@@ -726,3 +726,122 @@ Processing by ExercisesController#index as */*
 Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.4ms | Allocations: 3520)
 
 
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (3.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "2 Handed Kettlebell Swing"], ["description", "<p>Two Handed Russian Style Kettlebell swing</p>"], ["created_at", "2021-03-02 22:43:48.306841"], ["updated_at", "2021-03-02 22:43:48.306841"], ["gif", "https://media.giphy.com/media/fPWJGmS8Qizy8/giphy.gif"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (1.0ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Abduktoren-Maschine"], ["description", "<ul>\n<li>in eine aufrechte Position setzen, bei der die Beine hüftbreit geöffnet sind</li>\n<li>den Rücken, die Knie und die Oberschenkelaußenseite an die jeweiligen Polster pressen</li>\n<li>mit den Händen an den Griffen festhalten</li>\n<li>die Oberschenkel bis zum Anschlagpunkt der Hebelarme auseinander drücken</li>\n<li>danach die Beine wieder zusammen führen</li>\n<li>das Gesäß nicht vom Sitz abheben</li>\n<li>beim Auseinanderdrücken der Hebelarme aus- und beim Zusammenführen einatmen</li>\n</ul>"], ["created_at", "2021-03-02 22:43:48.349538"], ["updated_at", "2021-03-02 22:43:48.349538"], ["gif", "https://media.giphy.com/media/RIXkKMH70J5A42oNt5/giphy.gif"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Adduktoren Maschine"], ["description", "<p>Oberschenkel Innenseite!</p>"], ["created_at", "2021-03-02 22:43:48.355435"], ["updated_at", "2021-03-02 22:43:48.355435"], ["gif", "https://media.giphy.com/media/U8RXSRKv8uMPS/giphy.gif"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Arnold Press"], ["description", "<p>Zwei Kurzhanteln mit den Handflächen nach innen vor der Brust halten, Ellbogen unterhalb der Handgelenke.</p>\n<p>Ellbogen nach außen bringen und Hanteln über den Kopf heben. Drehung kommt aus dem Ellbogen, nicht aus den Armen!</p>\n<p>Wenn die Arme durchgestreckt sind, die gleiche Bewegung rückwärts ausführen.</p>"], ["created_at", "2021-03-02 22:43:48.359650"], ["updated_at", "2021-03-02 22:43:48.359650"], ["gif", "https://media.giphy.com/media/fPWJGmS8Qizy8/giphy.gif"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Arnold Shoulder Press"], ["description", "<p>Very common shoulder exercise.</p>\n<p> </p>\n<p>As shown here: https://www.youtube.com/watch?v=vj2w851ZHRM</p>"], ["created_at", "2021-03-02 22:43:48.364313"], ["updated_at", "2021-03-02 22:43:48.364313"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.5ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Asai Squad"], ["description", "<ol>\n<li>single leg sit and stand</li>\n</ol>"], ["created_at", "2021-03-02 22:43:48.368206"], ["updated_at", "2021-03-02 22:43:48.368206"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.6ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ausfallschritte im Gehen"], ["description", "<p>.</p>"], ["created_at", "2021-03-02 22:43:48.374065"], ["updated_at", "2021-03-02 22:43:48.374065"], ["gif", "https://media0.giphy.com/media/vwKp0DLW21fji/giphy.gif"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ausfallschritte Stehend"], ["description", "<p>.</p>"], ["created_at", "2021-03-02 22:43:48.380055"], ["updated_at", "2021-03-02 22:43:48.380055"], ["gif", "https://media.giphy.com/media/U8RXSRKv8uMPS/giphy.gif"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ausfallschritt Trizepsdrücken ü. Kopf, ß-Stange"], ["description", ""], ["created_at", "2021-03-02 22:43:48.384138"], ["updated_at", "2021-03-02 22:43:48.384138"], ["gif", "https://media.giphy.com/media/6Lt0PMyvjTX8c/giphy.gif"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Axe Hold"], ["description", "<p>Grab dumbbells and extend arms to side and hold as long as you can</p>"], ["created_at", "2021-03-02 22:43:48.387775"], ["updated_at", "2021-03-02 22:43:48.387775"], ["gif", "https://media1.giphy.com/media/10cylTGU0KcAsE/giphy.gif"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Axe Hold"], ["description", "<p>Nehmen Sie die Hanteln und strecken Sie die Arme zur Seite. Halten Sie sie so lange wie möglich.</p>"], ["created_at", "2021-03-02 22:43:48.391537"], ["updated_at", "2021-03-02 22:43:48.391537"], ["gif", "https://media0.giphy.com/media/vwKp0DLW21fji/giphy.gif"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Back Squat"], ["description", "<p>Place a barbell in a rack just below shoulder-height. Dip under the bar to put it behind the neck across the top of the back, and grip the bar with the hands wider than shoulder-width apart. Lift the chest up and squeeze the shoulder blades together to keep the straight back throughout the entire movement. Stand up to bring the bar off the rack and step backwards, then place the feet so that they are a little wider than shoulder-width apart. Sit back into hips and keep the back straight and the chest up, squatting down so the hips are below the knees. From the bottom of the squat, press feet into the ground and push hips forward to return to the top of the standing position.</p>"], ["created_at", "2021-03-02 22:43:48.395128"], ["updated_at", "2021-03-02 22:43:48.395128"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bankdrücken Eng"], ["description", "<p>Lege dich auf die Bank, die Stange direkt über die Augen, die Knie etwas angewinkelt und die Füße fest auf dem Boden. Greife nun die Stange mit einem engen Griff (nicht mehr als 20cm.). Führe nun das Gewicht so weit nach unten, bis die Oberarme paralell zum Boden sind, gehe dann wieder nach obern. Bringe die Stange nicht wie beim (breiten) Bankdrücken auf Brusthöhe runter, sondern weiter unten. Auf der tiefsten Stelle sollten deine Arme einen rechten Winkel machen.</p>"], ["created_at", "2021-03-02 22:43:48.403954"], ["updated_at", "2021-03-02 22:43:48.403954"], ["gif", "https://media.giphy.com/media/fPWJGmS8Qizy8/giphy.gif"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bankdrücken KH"], ["description", "<p>Der Bewegungsablauf ist ähnlich zur Übung mit einer Langhantel.</p>\n<p>Nehme die Gewichte in die Hände und lege dich auf die Bank. Halte die Hanteln neben der Brust auf Brustwarzenhöhe und drücke sie nun nach oben, bis die Arme ausgestreckt sind. Lasse die Gewichte nun langsam und kontrolliert runter.</p>\n<p> </p>"], ["created_at", "2021-03-02 22:43:48.414112"], ["updated_at", "2021-03-02 22:43:48.414112"], ["gif", "https://media.giphy.com/media/27c7PAUIqaaryrpxxP/giphy.gif"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.6ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bankdrücken LH"], ["description", "<p>Lege dich auf die Bank, die Stange direkt über die Augen, die Knie etwas angewinkelt und die Füße fest auf dem Boden. Greife die Stange breit und lasse sie langsam und kontrolliert runter, dabei sollte die Stange kurz auf Brustwarzenhöhe den Körper berühren. Dann das Gewicht wieder hochdrücken bis die Arme durchgestreckt sind.</p>\n<p>Bei hohem Gewicht, empfielt sich natürlich einen <em>Spotter</em> zu haben, der einen hilft falls man die Stange nicht alleine hochdrücken kann.</p>\n<p>Mit der Breite des Griffs kann außerdem kontrolliert werden, welcher Bereich der Brust stärker belastet wird:</p>\n<ul>\n<li>breiter Griff: äußere Brustmuskeln</li>\n<li>enger Griff: innere Brustmuskeln und Trizeps</li>\n</ul>"], ["created_at", "2021-03-02 22:43:48.425732"], ["updated_at", "2021-03-02 22:43:48.425732"], ["gif", "https://media.giphy.com/media/fPWJGmS8Qizy8/giphy.gif"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Barbell Ab Rollout"], ["description", "<p>Place a barbell on the floor at your feet.</p>\n<p>Bending at the waist, grip the barbell with a shoulder with overhand grip.</p>\n<p>With a slow controlled motion, roll the bar out so that your back is straight.</p>\n<p>Roll back up raising your hips and butt as you return to the starting position.</p>"], ["created_at", "2021-03-02 22:43:48.436379"], ["updated_at", "2021-03-02 22:43:48.436379"], ["gif", "https://media.giphy.com/media/U8RXSRKv8uMPS/giphy.gif"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Barbell Hack Squats"], ["description", "<p>Perform leg squats with barbell behind your legs</p>"], ["created_at", "2021-03-02 22:43:48.442604"], ["updated_at", "2021-03-02 22:43:48.442604"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Barbell Lunges"], ["description", "<p>Put barbell on the back of your shoulders. Stand upright, then take the first step forward. Step should bring you forward so that your supporting legs knee can touch the floor. Then stand back up and repeat with the other leg.</p>\n<p>Remember to keep good posture.</p>"], ["created_at", "2021-03-02 22:43:48.452580"], ["updated_at", "2021-03-02 22:43:48.452580"], ["gif", "https://media.giphy.com/media/27c7PAUIqaaryrpxxP/giphy.gif"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Barbell Reverse Wrist Curl"], ["description", "<p>Sitting on a bench, grab a barbell with your palms facing down and your hands shoulder-width apart. Rest your forearms on your thighs and allow your wrists to hang over your knees.</p>\n<p>Curl your knuckles towards your face, lifting the barbell. Pause for a moment in the top position, then slowly return the barbell to the starting position.</p>"], ["created_at", "2021-03-02 22:43:48.460330"], ["updated_at", "2021-03-02 22:43:48.460330"], ["gif", "https://media0.giphy.com/media/vwKp0DLW21fji/giphy.gif"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.6ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Barbell Triceps Extension"], ["description", "<p>Position barbell overhead with narrow overhand grip.</p>\n<p>Lower forearm behind upper arm with elbows remaining overhead. Extend forearm overhead. Lower and repeat.</p>"], ["created_at", "2021-03-02 22:43:48.469978"], ["updated_at", "2021-03-02 22:43:48.469978"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/exercises" for ::1 at 2021-03-02 15:48:51 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (2.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 70ms (Views: 49.4ms | ActiveRecord: 3.4ms | Allocations: 14252)
+
+
+Started POST "/login" for ::1 at 2021-03-02 15:49:04 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 988)
+
+
+Started POST "/users" for ::1 at 2021-03-02 15:49:49 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (3.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "kitkat"], ["password", "pw"], ["created_at", "2021-03-02 22:49:49.204190"], ["updated_at", "2021-03-02 22:49:49.204190"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mFavorite Load (0.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:22:in `create'
+Completed 200 OK in 67ms (Views: 43.5ms | ActiveRecord: 6.8ms | Allocations: 9638)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 15:50:54 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (0.9ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.9ms | Allocations: 6387)
+
+
+Started POST "/login" for ::1 at 2021-03-02 15:51:29 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `login'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 1327)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 15:51:35 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"exercise_id"=>82, "favorite"=>{"exercise_id"=>82}}

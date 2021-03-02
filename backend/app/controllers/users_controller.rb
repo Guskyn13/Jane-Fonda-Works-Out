@@ -12,6 +12,11 @@ class UsersController < ApplicationController
         end
     end
 
+    def index
+        @user = User.find(params[:user_id])
+        json render: @user
+    end
+
     def create
         @new_user = User.create(username: params[:username], password: params[:password])
         render json: @new_user, include: :favorites

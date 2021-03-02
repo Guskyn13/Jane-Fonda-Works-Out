@@ -11,6 +11,7 @@ class FavoritesController < ApplicationController
     end
 
     def create
+        byebug
         @new_favorite = Favorite.create(user_id: params[:user_id], exercise_id: params[:exercise_id])
     end
 
