@@ -1,5 +1,7 @@
 import { Component } from 'react'
 
+import './LoginForm.css'
+
 class LogInForm extends Component {
 
     state = {
@@ -26,7 +28,7 @@ class LogInForm extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form className="login-form" onSubmit={this.handleSubmit}>
                 {this.state.sign_up ?  <h2>Sign Up</h2> : <h2>Log In</h2>}
                 <label>Secret Alias:</label>
                 <input type="text" name="username" id="username" value={this.state.username} onChange={this.handleChange}/>
