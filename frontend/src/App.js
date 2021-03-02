@@ -1,9 +1,6 @@
 import './App.css';
 import Body from './Containers/Body'
 import { Component } from 'react'
-
-
-import { Component } from 'react'
 import Header from './Containers/Header';
 
 class App extends Component {
@@ -13,16 +10,6 @@ class App extends Component {
     exercises: [],
     favorites: []
   }
-
-  render() {
-    return (
-      <div className="App">
-        <Header />
-      </div>
-    );
-  }
-  
-}
 
   componentDidMount() {
     fetch('https://rickandmortyapi.com/api/character/?page=2')
@@ -35,7 +22,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Body />
+        <Body exercises={ this.state.exercises }/>
       </div>
     );
   }
