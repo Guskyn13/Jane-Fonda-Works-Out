@@ -1,6 +1,8 @@
 import React from 'react'
 import Card from '../Components/Card'
 
+import './ExercisesContainer.css'
+
 export default function ExercisesContainer({exercises}) {
 
     const displayCard = () => {
@@ -10,7 +12,7 @@ export default function ExercisesContainer({exercises}) {
     }
 
     return (
-        <ul>
+        <ul className="execises-container">
             { displayCard() }
         </ul>
     )
