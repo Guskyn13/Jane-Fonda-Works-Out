@@ -1,6 +1,7 @@
 import './App.css';
 import Body from './Containers/Body'
 import { Component } from 'react'
+
 import Header from './Containers/Header';
 
 class App extends Component {
@@ -22,7 +23,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header />
         <Body exercises={ this.state.exercises }/>
+      
       </div>
     );
   }
