@@ -64,7 +64,7 @@ class LogInForm extends Component {
                 {this.state.sign_up ?  <h2>Sign Up</h2> : <h2>Log In</h2>}
                 <label>Secret Alias:</label>
                 <input type="text" name="username" id="username" value={this.state.username} onChange={this.handleChange}/>
-                <label>Magic Word:</label>
+                <label>Secret Password:</label>
                 <input type="password" name="password" id="password" value={this.state.password} onChange={this.handleChange}/>
                 <input type="submit" value="ENTER"/>
                 {this.state.sign_up ? <button onClick={this.handleClick}>Log In</button> : <button onClick={this.handleClick}>Sign Up</button>}
