@@ -3,11 +3,11 @@ import Card from '../Components/Card'
 
 import './ExercisesContainer.css'
 
-export default function ExercisesContainer({exercises}) {
+export default function ExercisesContainer({ exercises, addFavorite }) {
 
     const displayCard = () => {
         return exercises.map(exercise => {
-            return <Card exercise={ exercise } key={ exercises.id }/>
+            return <Card exercise={ exercise } key={ exercise.id } addFavorite={ addFavorite }/>
         })
     }
 

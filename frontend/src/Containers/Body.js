@@ -5,11 +5,11 @@ import FavoritesContainer from './FavoritesContainer'
 
 import './Body.css'
 
-export default function Body({ exercises }) {
+export default function Body({ exercises, favorites, addFavorite }) {
     return (
         <div className = "body">
-            <FavoritesContainer />
-            <ExercisesContainer exercises={ exercises }/>
+            <FavoritesContainer favorites={ favorites }/>
+            <ExercisesContainer exercises={ exercises } addFavorite={ addFavorite }/>
         </div>
     )
 }
