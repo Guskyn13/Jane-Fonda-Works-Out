@@ -2,7 +2,6 @@ import './App.css';
 import Body from './Containers/Body'
 import { Component } from 'react'
 
-
 import Header from './Containers/Header';
 
 class App extends Component {
@@ -12,7 +11,6 @@ class App extends Component {
     exercises: [],
     favorites: []
   }
-
 
   componentDidMount() {
     fetch('https://rickandmortyapi.com/api/character/?page=2')
@@ -26,7 +24,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Body />
+        <Body exercises={ this.state.exercises }/>
+      
       </div>
     );
   }
