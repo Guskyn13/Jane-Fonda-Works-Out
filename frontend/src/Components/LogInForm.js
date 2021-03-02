@@ -28,7 +28,11 @@ class LogInForm extends Component {
                 })
             })
             .then(response => response.json())
-            .then(console.log)
+            .then(user => {
+                console.log(user)
+                this.props.setUser(user)
+                this.props.setFavorites(user)
+            })
         } else {
             fetch(`${backendURL}/login`, {
                 method: "POST",
@@ -42,7 +46,11 @@ class LogInForm extends Component {
                 })
             })
             .then(response => response.json())
-            .then(console.log)
+            .then(user => {
+                console.log(user)
+                this.props.setUser(user)
+                this.props.setFavorites(user.favorites)
+            })
         }
     }
 

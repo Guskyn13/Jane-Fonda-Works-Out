@@ -12,6 +12,7 @@ class FavoritesController < ApplicationController
 
     def create
         @new_favorite = Favorite.create(user_id: params[:user_id], exercise_id: params[:exercise_id])
+        render json: @new_favorite
     end
 
     def destroy
