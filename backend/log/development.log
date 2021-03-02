@@ -246,3 +246,78 @@ Processing by ExercisesController#index as */*
 Completed 200 OK in 96ms (Views: 51.6ms | ActiveRecord: 1.7ms | Allocations: 12612)
 
 
+Started OPTIONS "/login" for ::1 at 2021-03-02 14:17:23 -0700
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started OPTIONS "/login" for ::1 at 2021-03-02 14:17:24 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/login"):
+  
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/login"):
+  
+Started POST "/login" for ::1 at 2021-03-02 14:18:07 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"Phil", "password"=>"[FILTERED]", "user"=>{"username"=>"Phil", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Phil"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+  [1m[36mFavorite Load (0.8ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `login'
+Completed 200 OK in 296ms (Views: 130.7ms | ActiveRecord: 39.4ms | Allocations: 19054)
+
+
+Started POST "/users" for ::1 at 2021-03-02 14:18:25 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (3.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "kitkat"], ["password", "pw"], ["created_at", "2021-03-02 21:18:25.574712"], ["updated_at", "2021-03-02 21:18:25.574712"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+Completed 200 OK in 16ms (Views: 2.2ms | ActiveRecord: 5.9ms | Allocations: 2750)
+
+
+Started GET "/exer" for ::1 at 2021-03-02 14:20:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/exer"):
+  
+Started GET "/exercises" for ::1 at 2021-03-02 14:21:11 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (1.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 54ms (Views: 28.0ms | ActiveRecord: 2.6ms | Allocations: 8293)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 14:21:34 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.5ms | Allocations: 3659)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 14:22:21 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 193ms (Views: 191.7ms | ActiveRecord: 0.4ms | Allocations: 3642)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 14:22:43 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 3641)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 14:23:02 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 3658)
+
+
