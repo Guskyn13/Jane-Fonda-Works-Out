@@ -2,4 +2,6 @@
     display: flex;
     justify-content: space-between;
     padding: 40px 20px;
+    background-image: url('../assets/80s-theme-01.png');
+    background-position: center;
 }
