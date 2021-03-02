@@ -1,12 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+import { Component } from 'react'
+import Header from './Containers/Header';
+
+class App extends Component {
+
+  state = {
+    user: "",
+    exercises: [],
+    favorites: []
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+      </div>
+    );
+  }
+  
 }
 
 export default App;
