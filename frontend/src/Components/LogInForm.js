@@ -28,10 +28,10 @@ class LogInForm extends Component {
                 })
             })
             .then(response => response.json())
-            .then(user => {
-                console.log(user)
-                this.props.setUser(user)
-                this.props.setFavorites(user)
+            .then(result => {
+                console.log(result)
+                this.props.setUser(result.user)
+                this.props.setFavorites(result.favorites)
             })
         } else {
             fetch(`${backendURL}/login`, {
@@ -46,10 +46,10 @@ class LogInForm extends Component {
                 })
             })
             .then(response => response.json())
-            .then(user => {
-                console.log(user)
-                this.props.setUser(user)
-                this.props.setFavorites(user.favorites)
+            .then(result => {
+                console.log(result)
+                this.props.setUser(result.user)
+                this.props.setFavorites(result.favorites)
             })
         }
     }

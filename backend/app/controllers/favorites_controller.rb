@@ -11,13 +11,13 @@ class FavoritesController < ApplicationController
     end
 
     def create
-        byebug
         @new_favorite = Favorite.create(user_id: params[:user_id], exercise_id: params[:exercise_id])
+        render json: @new_favorite
     end
 
     def destroy
-        @favorite = Favorite.find(params[:id])
+        @favorite = Favorite.find_by(exercise_id: params[:id])
         @favorite.delete
-        render json: "Favorite Deleted"
+        render json: {message: "Favorite Deleted"}
     end
 end

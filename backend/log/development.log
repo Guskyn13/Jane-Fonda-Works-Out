@@ -878,3 +878,1377 @@ SystemExit (exit):
 (byebug):1:in `exit'
 (byebug):1:in `create'
 app/controllers/favorites_controller.rb:15:in `create'
+Started POST "/users" for ::1 at 2021-03-02 16:01:18 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "kitkat"], ["password", "pw"], ["created_at", "2021-03-02 23:01:19.126243"], ["updated_at", "2021-03-02 23:01:19.126243"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mFavorite Load (0.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:22:in `create'
+Completed 200 OK in 45ms (Views: 18.4ms | ActiveRecord: 4.6ms | Allocations: 12701)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 16:03:05 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (2.9ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 506ms (Views: 437.5ms | ActiveRecord: 9.9ms | Allocations: 10978)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:03:13 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `login'
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 1455)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 16:06:49 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (0.7ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 59ms (Views: 56.7ms | ActiveRecord: 0.7ms | Allocations: 6386)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:06:54 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `login'
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 0.4ms | Allocations: 1319)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:06:55 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"exercise_id"=>82, "favorite"=>{"exercise_id"=>82}}
+Completed 500 Internal Server Error in 336240ms (ActiveRecord: 0.0ms | Allocations: 62388)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:12:31 -0700
+Started POST "/login" for ::1 at 2021-03-02 16:12:31 -0700
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/favorites_controller.rb:15:in `create'
+Processing by FavoritesController#create as JSON
+Started GET "/exercises" for ::1 at 2021-03-02 16:12:32 -0700
+  Parameters: {"exercise_id"=>84, "favorite"=>{"exercise_id"=>84}}
+Started POST "/login" for ::1 at 2021-03-02 16:13:09 -0700
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `login'
+Completed 200 OK in 58ms (Views: 21.9ms | ActiveRecord: 3.0ms | Allocations: 10394)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:13:10 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `login'
+Completed 200 OK in 25ms (Views: 15.9ms | ActiveRecord: 1.1ms | Allocations: 1363)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:13:47 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `login'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.6ms | Allocations: 1319)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:15:08 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `login'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1319)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.6ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "2 Handed Kettlebell Swing"], ["description", "<p>Two Handed Russian Style Kettlebell swing</p>"], ["created_at", "2021-03-02 23:16:55.697167"], ["updated_at", "2021-03-02 23:16:55.697167"], ["gif", "https://media.giphy.com/media/U8RXSRKv8uMPS/giphy.gif"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.5ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Abduktoren-Maschine"], ["description", "<ul>\n<li>in eine aufrechte Position setzen, bei der die Beine hüftbreit geöffnet sind</li>\n<li>den Rücken, die Knie und die Oberschenkelaußenseite an die jeweiligen Polster pressen</li>\n<li>mit den Händen an den Griffen festhalten</li>\n<li>die Oberschenkel bis zum Anschlagpunkt der Hebelarme auseinander drücken</li>\n<li>danach die Beine wieder zusammen führen</li>\n<li>das Gesäß nicht vom Sitz abheben</li>\n<li>beim Auseinanderdrücken der Hebelarme aus- und beim Zusammenführen einatmen</li>\n</ul>"], ["created_at", "2021-03-02 23:16:55.705778"], ["updated_at", "2021-03-02 23:16:55.705778"], ["gif", "https://media.giphy.com/media/U8RXSRKv8uMPS/giphy.gif"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.8ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Adduktoren Maschine"], ["description", "<p>Oberschenkel Innenseite!</p>"], ["created_at", "2021-03-02 23:16:55.713141"], ["updated_at", "2021-03-02 23:16:55.713141"], ["gif", "https://media1.giphy.com/media/10cylTGU0KcAsE/giphy.gif"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (1.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Arnold Press"], ["description", "<p>Zwei Kurzhanteln mit den Handflächen nach innen vor der Brust halten, Ellbogen unterhalb der Handgelenke.</p>\n<p>Ellbogen nach außen bringen und Hanteln über den Kopf heben. Drehung kommt aus dem Ellbogen, nicht aus den Armen!</p>\n<p>Wenn die Arme durchgestreckt sind, die gleiche Bewegung rückwärts ausführen.</p>"], ["created_at", "2021-03-02 23:16:55.723754"], ["updated_at", "2021-03-02 23:16:55.723754"], ["gif", "https://media1.giphy.com/media/10cylTGU0KcAsE/giphy.gif"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.5ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Arnold Shoulder Press"], ["description", "<p>Very common shoulder exercise.</p>\n<p> </p>\n<p>As shown here: https://www.youtube.com/watch?v=vj2w851ZHRM</p>"], ["created_at", "2021-03-02 23:16:55.733451"], ["updated_at", "2021-03-02 23:16:55.733451"], ["gif", "https://media0.giphy.com/media/vwKp0DLW21fji/giphy.gif"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.6ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Asai Squad"], ["description", "<ol>\n<li>single leg sit and stand</li>\n</ol>"], ["created_at", "2021-03-02 23:16:55.740747"], ["updated_at", "2021-03-02 23:16:55.740747"], ["gif", "https://media.giphy.com/media/U8RXSRKv8uMPS/giphy.gif"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ausfallschritte im Gehen"], ["description", "<p>.</p>"], ["created_at", "2021-03-02 23:16:55.747235"], ["updated_at", "2021-03-02 23:16:55.747235"], ["gif", "https://media.giphy.com/media/RIXkKMH70J5A42oNt5/giphy.gif"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ausfallschritte Stehend"], ["description", "<p>.</p>"], ["created_at", "2021-03-02 23:16:55.756303"], ["updated_at", "2021-03-02 23:16:55.756303"], ["gif", "https://media1.giphy.com/media/10cylTGU0KcAsE/giphy.gif"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.6ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ausfallschritt Trizepsdrücken ü. Kopf, ß-Stange"], ["description", ""], ["created_at", "2021-03-02 23:16:55.763360"], ["updated_at", "2021-03-02 23:16:55.763360"], ["gif", "https://media.giphy.com/media/U8RXSRKv8uMPS/giphy.gif"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.5ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Axe Hold"], ["description", "<p>Grab dumbbells and extend arms to side and hold as long as you can</p>"], ["created_at", "2021-03-02 23:16:55.791026"], ["updated_at", "2021-03-02 23:16:55.791026"], ["gif", "https://media.giphy.com/media/U8RXSRKv8uMPS/giphy.gif"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Axe Hold"], ["description", "<p>Nehmen Sie die Hanteln und strecken Sie die Arme zur Seite. Halten Sie sie so lange wie möglich.</p>"], ["created_at", "2021-03-02 23:16:55.796598"], ["updated_at", "2021-03-02 23:16:55.796598"], ["gif", "https://media3.giphy.com/media/l2Jhx6TQ6P3WAnv8c/giphy.gif"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.5ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Back Squat"], ["description", "<p>Place a barbell in a rack just below shoulder-height. Dip under the bar to put it behind the neck across the top of the back, and grip the bar with the hands wider than shoulder-width apart. Lift the chest up and squeeze the shoulder blades together to keep the straight back throughout the entire movement. Stand up to bring the bar off the rack and step backwards, then place the feet so that they are a little wider than shoulder-width apart. Sit back into hips and keep the back straight and the chest up, squatting down so the hips are below the knees. From the bottom of the squat, press feet into the ground and push hips forward to return to the top of the standing position.</p>"], ["created_at", "2021-03-02 23:16:55.801192"], ["updated_at", "2021-03-02 23:16:55.801192"], ["gif", "https://media.giphy.com/media/RIXkKMH70J5A42oNt5/giphy.gif"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (1.2ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bankdrücken Eng"], ["description", "<p>Lege dich auf die Bank, die Stange direkt über die Augen, die Knie etwas angewinkelt und die Füße fest auf dem Boden. Greife nun die Stange mit einem engen Griff (nicht mehr als 20cm.). Führe nun das Gewicht so weit nach unten, bis die Oberarme paralell zum Boden sind, gehe dann wieder nach obern. Bringe die Stange nicht wie beim (breiten) Bankdrücken auf Brusthöhe runter, sondern weiter unten. Auf der tiefsten Stelle sollten deine Arme einen rechten Winkel machen.</p>"], ["created_at", "2021-03-02 23:16:55.806505"], ["updated_at", "2021-03-02 23:16:55.806505"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.7ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bankdrücken KH"], ["description", "<p>Der Bewegungsablauf ist ähnlich zur Übung mit einer Langhantel.</p>\n<p>Nehme die Gewichte in die Hände und lege dich auf die Bank. Halte die Hanteln neben der Brust auf Brustwarzenhöhe und drücke sie nun nach oben, bis die Arme ausgestreckt sind. Lasse die Gewichte nun langsam und kontrolliert runter.</p>\n<p> </p>"], ["created_at", "2021-03-02 23:16:55.812808"], ["updated_at", "2021-03-02 23:16:55.812808"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.5ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bankdrücken LH"], ["description", "<p>Lege dich auf die Bank, die Stange direkt über die Augen, die Knie etwas angewinkelt und die Füße fest auf dem Boden. Greife die Stange breit und lasse sie langsam und kontrolliert runter, dabei sollte die Stange kurz auf Brustwarzenhöhe den Körper berühren. Dann das Gewicht wieder hochdrücken bis die Arme durchgestreckt sind.</p>\n<p>Bei hohem Gewicht, empfielt sich natürlich einen <em>Spotter</em> zu haben, der einen hilft falls man die Stange nicht alleine hochdrücken kann.</p>\n<p>Mit der Breite des Griffs kann außerdem kontrolliert werden, welcher Bereich der Brust stärker belastet wird:</p>\n<ul>\n<li>breiter Griff: äußere Brustmuskeln</li>\n<li>enger Griff: innere Brustmuskeln und Trizeps</li>\n</ul>"], ["created_at", "2021-03-02 23:16:55.821751"], ["updated_at", "2021-03-02 23:16:55.821751"], ["gif", "https://media.giphy.com/media/RIXkKMH70J5A42oNt5/giphy.gif"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.5ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Barbell Ab Rollout"], ["description", "<p>Place a barbell on the floor at your feet.</p>\n<p>Bending at the waist, grip the barbell with a shoulder with overhand grip.</p>\n<p>With a slow controlled motion, roll the bar out so that your back is straight.</p>\n<p>Roll back up raising your hips and butt as you return to the starting position.</p>"], ["created_at", "2021-03-02 23:16:55.828232"], ["updated_at", "2021-03-02 23:16:55.828232"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.5ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Barbell Hack Squats"], ["description", "<p>Perform leg squats with barbell behind your legs</p>"], ["created_at", "2021-03-02 23:16:55.834020"], ["updated_at", "2021-03-02 23:16:55.834020"], ["gif", "https://media.giphy.com/media/fPWJGmS8Qizy8/giphy.gif"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Barbell Lunges"], ["description", "<p>Put barbell on the back of your shoulders. Stand upright, then take the first step forward. Step should bring you forward so that your supporting legs knee can touch the floor. Then stand back up and repeat with the other leg.</p>\n<p>Remember to keep good posture.</p>"], ["created_at", "2021-03-02 23:16:55.839754"], ["updated_at", "2021-03-02 23:16:55.839754"], ["gif", "https://media.giphy.com/media/RIXkKMH70J5A42oNt5/giphy.gif"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.8ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Barbell Reverse Wrist Curl"], ["description", "<p>Sitting on a bench, grab a barbell with your palms facing down and your hands shoulder-width apart. Rest your forearms on your thighs and allow your wrists to hang over your knees.</p>\n<p>Curl your knuckles towards your face, lifting the barbell. Pause for a moment in the top position, then slowly return the barbell to the starting position.</p>"], ["created_at", "2021-03-02 23:16:55.846049"], ["updated_at", "2021-03-02 23:16:55.846049"], ["gif", "https://media1.giphy.com/media/10cylTGU0KcAsE/giphy.gif"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mExercise Create (0.8ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "description", "created_at", "updated_at", "gif") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Barbell Triceps Extension"], ["description", "<p>Position barbell overhead with narrow overhand grip.</p>\n<p>Lower forearm behind upper arm with elbows remaining overhead. Extend forearm overhead. Lower and repeat.</p>"], ["created_at", "2021-03-02 23:16:55.855729"], ["updated_at", "2021-03-02 23:16:55.855729"], ["gif", "https://media0.giphy.com/media/vwKp0DLW21fji/giphy.gif"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/exercises" for ::1 at 2021-03-02 16:17:03 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (1.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 77ms (Views: 65.2ms | ActiveRecord: 2.7ms | Allocations: 13893)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:17:07 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `login'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.6ms | Allocations: 1299)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:17:18 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"exercise_id"=>82, "favorite"=>{"exercise_id"=>82}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 204 No Content in 18ms (ActiveRecord: 1.1ms | Allocations: 4994)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 16:18:16 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.3ms | Allocations: 9268)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 16:18:23 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (0.8ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.8ms | Allocations: 9251)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:18:28 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `login'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 1300)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:18:30 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"exercise_id"=>82, "favorite"=>{"exercise_id"=>82}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 204 No Content in 7ms (ActiveRecord: 0.5ms | Allocations: 1962)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:18:33 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"exercise_id"=>83, "favorite"=>{"exercise_id"=>83}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 204 No Content in 6ms (ActiveRecord: 0.3ms | Allocations: 1959)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 16:20:07 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.4ms | Allocations: 9250)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 16:20:14 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (0.8ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 0.8ms | Allocations: 9250)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:20:18 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `login'
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 1299)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 16:30:11 -0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (2.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 174ms (Views: 92.9ms | ActiveRecord: 3.5ms | Allocations: 17136)
+
+
+Started POST "/users" for ::1 at 2021-03-02 16:30:18 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "kitkat"], ["password", "pw"], ["created_at", "2021-03-02 23:30:18.148632"], ["updated_at", "2021-03-02 23:30:18.148632"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mFavorite Load (1.0ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:22:in `create'
+Completed 200 OK in 90ms (Views: 51.2ms | ActiveRecord: 10.8ms | Allocations: 8433)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 16:31:11 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (1.0ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 606ms (Views: 601.1ms | ActiveRecord: 1.0ms | Allocations: 9278)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:31:16 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+  [1m[36mFavorite Load (2.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `login'
+Completed 200 OK in 13ms (Views: 5.2ms | ActiveRecord: 2.9ms | Allocations: 1455)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 16:33:37 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (2.9ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 72ms (Views: 68.9ms | ActiveRecord: 2.9ms | Allocations: 9250)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:33:41 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `login'
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.7ms | Allocations: 1299)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 16:35:56 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (1.0ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 1.0ms | Allocations: 9250)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:36:01 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `login'
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.4ms | Allocations: 1301)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:36:02 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"exercise_id"=>82, "favorite"=>{"exercise_id"=>82}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 204 No Content in 19ms (ActiveRecord: 1.2ms | Allocations: 4959)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:36:47 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FavoritesController#create as JSON
+  Parameters: {"exercise_id"=>83, "favorite"=>{"exercise_id"=>83}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 2.4ms | Allocations: 10293)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:36:50 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"exercise_id"=>86, "favorite"=>{"exercise_id"=>86}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (0.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 2031)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:37:06 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FavoritesController#create as JSON
+  Parameters: {"exercise_id"=>85, "favorite"=>{"exercise_id"=>85}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 85], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 46ms (Views: 0.3ms | ActiveRecord: 3.9ms | Allocations: 10314)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:37:29 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FavoritesController#create as JSON
+  Parameters: {"exercise_id"=>96, "favorite"=>{"exercise_id"=>96}}
+Completed 500 Internal Server Error in 55906ms (ActiveRecord: 1.7ms | Allocations: 55359)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/favorites_controller.rb:15:in `create'
+Started GET "/exercises" for ::1 at 2021-03-02 16:38:25 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (12.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 1110ms (Views: 962.9ms | ActiveRecord: 48.1ms | Allocations: 3733405)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:38:39 -0700
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+  [1m[36mFavorite Load (2.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `login'
+Completed 200 OK in 288ms (Views: 142.9ms | ActiveRecord: 29.2ms | Allocations: 1585174)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:38:45 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>83, "favorite"=>{"user_id"=>3, "exercise_id"=>83}}
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (2.7ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mUser Load (15.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mFavorite Create (3.8ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["exercise_id", 83], ["created_at", "2021-03-02 23:38:46.273304"], ["updated_at", "2021-03-02 23:38:46.273304"]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 1076ms (Views: 6.8ms | ActiveRecord: 103.2ms | Allocations: 3569680)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:38:54 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>89, "favorite"=>{"user_id"=>3, "exercise_id"=>89}}
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (4.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 89], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mFavorite Create (5.7ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["exercise_id", 89], ["created_at", "2021-03-02 23:38:55.177746"], ["updated_at", "2021-03-02 23:38:55.177746"]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 347ms (Views: 20.6ms | ActiveRecord: 28.5ms | Allocations: 1393740)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 16:39:05 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (13.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 825ms (Views: 794.3ms | ActiveRecord: 13.6ms | Allocations: 4612068)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:39:13 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+  [1m[36mFavorite Load (7.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `login'
+Completed 200 OK in 101ms (Views: 58.3ms | ActiveRecord: 8.4ms | Allocations: 728264)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:41:51 -0700
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>128, "favorite"=>{"user_id"=>3, "exercise_id"=>128}}
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 13.5ms | Allocations: 537063)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:24:in `create'
+Started GET "/exercises" for ::1 at 2021-03-02 16:43:18 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (2.8ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 939ms (Views: 869.5ms | ActiveRecord: 21.6ms | Allocations: 5928696)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:43:23 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mFavorite Load (1.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:7:in `login'
+Completed 200 OK in 267ms (Views: 153.9ms | ActiveRecord: 24.1ms | Allocations: 2267939)
+
+
+Started DELETE "/favorites2" for ::1 at 2021-03-02 16:43:25 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/favorites2"):
+  
+Started DELETE "/favorites3" for ::1 at 2021-03-02 16:43:27 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/favorites3"):
+  
+Started GET "/exercises" for ::1 at 2021-03-02 16:43:39 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (5.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 2083ms (Views: 2070.9ms | ActiveRecord: 5.6ms | Allocations: 4604121)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:43:43 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mFavorite Load (2.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:7:in `login'
+Completed 200 OK in 174ms (Views: 123.1ms | ActiveRecord: 4.2ms | Allocations: 726256)
+
+
+Started DELETE "/favorites/2" for ::1 at 2021-03-02 16:43:45 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"2", "favorite"=>{}}
+  [1m[36mFavorite Load (20.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:29:in `destroy'
+  [1m[36mFavorite Destroy (5.4ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/favorites_controller.rb:30:in `destroy'
+Completed 200 OK in 174ms (Views: 6.6ms | ActiveRecord: 26.2ms | Allocations: 465629)
+
+
+Started DELETE "/favorites/3" for ::1 at 2021-03-02 16:44:13 -0700
+Started GET "/exercises" for ::1 at 2021-03-02 16:44:16 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"3", "favorite"=>{}}
+  [1m[36mFavorite Load (1.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:29:in `destroy'
+  [1m[36mFavorite Destroy (14.1ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/favorites_controller.rb:30:in `destroy'
+Completed 200 OK in 197ms (Views: 8.8ms | ActiveRecord: 28.6ms | Allocations: 1091316)
+
+
+Processing by ExercisesController#index as */*
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+  [1m[36mExercise Load (12.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 1013ms (Views: 953.6ms | ActiveRecord: 33.1ms | Allocations: 6149455)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:44:20 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mFavorite Load (6.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:7:in `login'
+Completed 200 OK in 268ms (Views: 125.8ms | ActiveRecord: 18.2ms | Allocations: 1848016)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:44:23 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>125, "favorite"=>{"user_id"=>3, "exercise_id"=>125}}
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.0ms | Allocations: 534985)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:24:in `create'
+Started DELETE "/favorites/125" for ::1 at 2021-03-02 16:44:27 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"125", "favorite"=>{}}
+  [1m[36mFavorite Load (2.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."id" = ? LIMIT ?[0m  [["id", 125], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:29:in `destroy'
+Completed 404 Not Found in 63ms (ActiveRecord: 12.9ms | Allocations: 373514)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Favorite with 'id'=125):
+  
+app/controllers/favorites_controller.rb:29:in `destroy'
+Started GET "/exercises" for ::1 at 2021-03-02 16:45:23 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (32.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 1425ms (Views: 1330.2ms | ActiveRecord: 32.2ms | Allocations: 4605915)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:46:05 -0700
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mFavorite Load (2.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:7:in `login'
+Completed 200 OK in 286ms (Views: 142.0ms | ActiveRecord: 23.3ms | Allocations: 1871583)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:46:08 -0700
+Started POST "/favorites" for ::1 at 2021-03-02 16:46:11 -0700
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mFavorite Load (1.6ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:7:in `login'
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>82, "favorite"=>{"user_id"=>3, "exercise_id"=>82}}
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 5.8ms | Allocations: 521889)
+
+
+Completed 200 OK in 596ms (Views: 382.5ms | ActiveRecord: 29.5ms | Allocations: 2857934)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:24:in `create'
+Started POST "/favorites" for ::1 at 2021-03-02 16:46:15 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>82, "favorite"=>{"user_id"=>3, "exercise_id"=>82}}
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 0.0ms | Allocations: 531444)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:24:in `create'
+Started POST "/favorites" for ::1 at 2021-03-02 16:46:53 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>86, "favorite"=>{"user_id"=>3, "exercise_id"=>86}}
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.0ms | Allocations: 531444)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:24:in `create'
+Started GET "/exercises" for ::1 at 2021-03-02 16:47:02 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (9.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 1811ms (Views: 1630.1ms | ActiveRecord: 30.9ms | Allocations: 5965926)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:47:08 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mFavorite Load (11.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:7:in `login'
+Completed 200 OK in 320ms (Views: 240.2ms | ActiveRecord: 16.3ms | Allocations: 588541)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:47:10 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>82, "favorite"=>{"user_id"=>3, "exercise_id"=>82}}
+Completed 500 Internal Server Error in 237ms (ActiveRecord: 0.0ms | Allocations: 531443)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:24:in `create'
+Started POST "/favorites" for ::1 at 2021-03-02 16:47:12 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>87, "favorite"=>{"user_id"=>3, "exercise_id"=>87}}
+Completed 500 Internal Server Error in 173ms (ActiveRecord: 0.0ms | Allocations: 528821)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:24:in `create'
+Started GET "/exercises" for ::1 at 2021-03-02 16:47:44 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (71.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 2350ms (Views: 2268.1ms | ActiveRecord: 71.6ms | Allocations: 4606669)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:47:49 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mFavorite Load (4.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:7:in `login'
+Completed 200 OK in 189ms (Views: 109.0ms | ActiveRecord: 7.2ms | Allocations: 581235)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:47:50 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mFavorite Load (19.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:7:in `login'
+Completed 200 OK in 555ms (Views: 218.5ms | ActiveRecord: 27.5ms | Allocations: 583780)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:47:51 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>82, "favorite"=>{"user_id"=>3, "exercise_id"=>82}}
+Completed 500 Internal Server Error in 251ms (ActiveRecord: 0.0ms | Allocations: 533929)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:24:in `create'
+Started POST "/favorites" for ::1 at 2021-03-02 16:48:39 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>84, "favorite"=>{"user_id"=>3, "exercise_id"=>84}}
+Completed 500 Internal Server Error in 185ms (ActiveRecord: 0.0ms | Allocations: 531443)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:24:in `create'
+Started POST "/favorites" for ::1 at 2021-03-02 16:48:41 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>87, "favorite"=>{"user_id"=>3, "exercise_id"=>87}}
+Completed 500 Internal Server Error in 260ms (ActiveRecord: 0.0ms | Allocations: 691802)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:24:in `create'
+Started GET "/exercises" for ::1 at 2021-03-02 16:49:07 -0700
+Processing by ExercisesController#index as */*
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+  [1m[36mExercise Load (9.0ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 1697ms (Views: 1593.7ms | ActiveRecord: 34.5ms | Allocations: 6200909)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:49:13 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mFavorite Load (2.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:7:in `login'
+Completed 200 OK in 482ms (Views: 191.4ms | ActiveRecord: 46.1ms | Allocations: 1858311)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:49:16 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>82, "favorite"=>{"user_id"=>3, "exercise_id"=>82}}
+Completed 500 Internal Server Error in 155ms (ActiveRecord: 0.0ms | Allocations: 534984)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:24:in `create'
+Started POST "/favorites" for ::1 at 2021-03-02 16:49:20 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>96, "favorite"=>{"user_id"=>3, "exercise_id"=>96}}
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 0.0ms | Allocations: 531443)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:24:in `create'
+Started GET "/exercises" for ::1 at 2021-03-02 16:50:31 -0700
+Processing by ExercisesController#index as */*
+Started POST "/login" for ::1 at 2021-03-02 16:50:35 -0700
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+  [1m[36mExercise Load (15.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 1562ms (Views: 1467.7ms | ActiveRecord: 45.1ms | Allocations: 6312081)
+
+
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mFavorite Load (2.6ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:7:in `login'
+Completed 200 OK in 381ms (Views: 179.3ms | ActiveRecord: 40.7ms | Allocations: 1859034)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:50:45 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>82, "favorite"=>{"user_id"=>3, "exercise_id"=>82}}
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (20.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mFavorite Create (2.1ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["exercise_id", 82], ["created_at", "2021-03-02 23:50:47.100125"], ["updated_at", "2021-03-02 23:50:47.100125"]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (33.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 1652ms (Views: 38.4ms | ActiveRecord: 112.0ms | Allocations: 3678379)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:51:19 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>83, "favorite"=>{"user_id"=>3, "exercise_id"=>83}}
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (3.9ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mFavorite Create (4.2ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["exercise_id", 83], ["created_at", "2021-03-02 23:51:19.516729"], ["updated_at", "2021-03-02 23:51:19.516729"]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 367ms (Views: 11.5ms | ActiveRecord: 18.4ms | Allocations: 1391255)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:51:21 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>85, "favorite"=>{"user_id"=>3, "exercise_id"=>85}}
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (1.7ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 85], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mFavorite Create (2.5ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["exercise_id", 85], ["created_at", "2021-03-02 23:51:21.416301"], ["updated_at", "2021-03-02 23:51:21.416301"]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 382ms (Views: 7.1ms | ActiveRecord: 10.6ms | Allocations: 1391255)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:51:23 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>86, "favorite"=>{"user_id"=>3, "exercise_id"=>86}}
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (3.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mFavorite Create (6.3ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["exercise_id", 86], ["created_at", "2021-03-02 23:51:24.117616"], ["updated_at", "2021-03-02 23:51:24.117616"]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 584ms (Views: 13.7ms | ActiveRecord: 16.3ms | Allocations: 1400271)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:51:32 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>91, "favorite"=>{"user_id"=>3, "exercise_id"=>91}}
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (4.7ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mFavorite Create (6.8ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["exercise_id", 91], ["created_at", "2021-03-02 23:51:32.732464"], ["updated_at", "2021-03-02 23:51:32.732464"]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 683ms (Views: 42.0ms | ActiveRecord: 24.1ms | Allocations: 1571956)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 16:53:07 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (14.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 2375ms (Views: 2317.7ms | ActiveRecord: 14.6ms | Allocations: 4608682)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:53:12 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mFavorite Load (7.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:7:in `login'
+Completed 200 OK in 392ms (Views: 303.9ms | ActiveRecord: 10.4ms | Allocations: 946032)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 16:53:37 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (7.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 1476ms (Views: 1403.0ms | ActiveRecord: 7.4ms | Allocations: 4606607)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:53:45 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mFavorite Load (4.6ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:7:in `login'
+Completed 200 OK in 270ms (Views: 226.7ms | ActiveRecord: 5.8ms | Allocations: 944025)
+
+
+Started DELETE "/favorites/4" for ::1 at 2021-03-02 16:53:50 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"4", "favorite"=>{}}
+  [1m[36mFavorite Load (2.8ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+  [1m[36mFavorite Destroy (9.6ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+Completed 200 OK in 170ms (Views: 17.1ms | ActiveRecord: 12.3ms | Allocations: 470898)
+
+
+Started DELETE "/favorites/5" for ::1 at 2021-03-02 16:53:52 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"5", "favorite"=>{}}
+  [1m[36mFavorite Load (1.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+  [1m[36mFavorite Destroy (6.0ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+Completed 200 OK in 129ms (Views: 5.4ms | ActiveRecord: 7.9ms | Allocations: 378414)
+
+
+Started DELETE "/favorites/6" for ::1 at 2021-03-02 16:53:53 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"6", "favorite"=>{}}
+  [1m[36mFavorite Load (6.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+  [1m[36mFavorite Destroy (6.3ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+Completed 200 OK in 129ms (Views: 10.9ms | ActiveRecord: 12.7ms | Allocations: 378414)
+
+
+Started DELETE "/favorites/7" for ::1 at 2021-03-02 16:53:53 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"7", "favorite"=>{}}
+  [1m[36mFavorite Load (3.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+  [1m[36mFavorite Destroy (20.7ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+Completed 200 OK in 135ms (Views: 29.3ms | ActiveRecord: 23.8ms | Allocations: 378414)
+
+
+Started DELETE "/favorites/8" for ::1 at 2021-03-02 16:53:54 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"8", "favorite"=>{}}
+  [1m[36mFavorite Load (4.8ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+  [1m[36mFavorite Destroy (5.8ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+Completed 200 OK in 132ms (Views: 5.8ms | ActiveRecord: 10.6ms | Allocations: 378414)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 16:53:59 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>82, "favorite"=>{"user_id"=>3, "exercise_id"=>82}}
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (2.0ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mUser Load (15.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mFavorite Create (2.5ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["exercise_id", 82], ["created_at", "2021-03-02 23:53:59.687222"], ["updated_at", "2021-03-02 23:53:59.687222"]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 457ms (Views: 17.3ms | ActiveRecord: 26.8ms | Allocations: 1391254)
+
+
+Started DELETE "/favorites/82" for ::1 at 2021-03-02 16:54:00 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"82", "favorite"=>{}}
+  [1m[36mFavorite Load (5.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+Completed 404 Not Found in 59ms (ActiveRecord: 5.1ms | Allocations: 187365)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Favorite with 'id'=82):
+  
+app/controllers/favorites_controller.rb:19:in `destroy'
+Started POST "/favorites" for ::1 at 2021-03-02 16:54:18 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>83, "favorite"=>{"user_id"=>3, "exercise_id"=>83}}
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (24.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mFavorite Create (3.3ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["exercise_id", 83], ["created_at", "2021-03-02 23:54:19.535029"], ["updated_at", "2021-03-02 23:54:19.535029"]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 626ms (Views: 26.1ms | ActiveRecord: 34.6ms | Allocations: 1394552)
+
+
+Started DELETE "/favorites/83" for ::1 at 2021-03-02 16:54:20 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"83", "favorite"=>{}}
+  [1m[36mFavorite Load (3.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+Completed 404 Not Found in 74ms (ActiveRecord: 3.5ms | Allocations: 187365)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Favorite with 'id'=83):
+  
+app/controllers/favorites_controller.rb:19:in `destroy'
+Started POST "/favorites" for ::1 at 2021-03-02 16:54:39 -0700
+Started GET "/exercises" for ::1 at 2021-03-02 16:54:47 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>82, "favorite"=>{"user_id"=>3, "exercise_id"=>82}}
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (5.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mUser Load (18.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mFavorite Create (10.3ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["exercise_id", 82], ["created_at", "2021-03-02 23:54:48.815592"], ["updated_at", "2021-03-02 23:54:48.815592"]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 1444ms (Views: 23.9ms | ActiveRecord: 118.3ms | Allocations: 4871829)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:54:52 -0700
+Processing by ExercisesController#index as */*
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (9.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Processing by UsersController#login as JSON
+  [1m[36mExercise Load (4.8ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mFavorite Load (2.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:7:in `login'
+Completed 200 OK in 1944ms (Views: 1141.6ms | ActiveRecord: 94.1ms | Allocations: 6650324)
+
+
+Completed 200 OK in 2697ms (Views: 2489.3ms | ActiveRecord: 36.9ms | Allocations: 9988540)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 16:56:36 -0700
+Started POST "/login" for ::1 at 2021-03-02 16:56:41 -0700
+Processing by ExercisesController#index as */*
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+  [1m[36mExercise Load (11.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 1506ms (Views: 1401.3ms | ActiveRecord: 52.8ms | Allocations: 6203102)
+
+
+  [1m[35m (10.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mExercise Load (1.8ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" INNER JOIN "favorites" ON "exercises"."id" = "favorites"."exercise_id" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:8:in `login'
+Completed 200 OK in 950ms (Views: 472.1ms | ActiveRecord: 126.5ms | Allocations: 3672274)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:59:06 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mExercise Load (1.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" INNER JOIN "favorites" ON "exercises"."id" = "favorites"."exercise_id" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:8:in `login'
+Completed 200 OK in 113ms (Views: 79.7ms | ActiveRecord: 7.9ms | Allocations: 867885)
+
+
+Started DELETE "/favorites/83" for ::1 at 2021-03-02 16:59:12 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"83", "favorite"=>{}}
+  [1m[36mFavorite Load (2.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+Completed 404 Not Found in 54ms (ActiveRecord: 5.0ms | Allocations: 369065)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Favorite with 'id'=83):
+  
+app/controllers/favorites_controller.rb:19:in `destroy'
+Started DELETE "/favorites/82" for ::1 at 2021-03-02 16:59:15 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"82", "favorite"=>{}}
+  [1m[36mFavorite Load (1.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+Completed 404 Not Found in 25ms (ActiveRecord: 1.5ms | Allocations: 187364)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Favorite with 'id'=82):
+  
+app/controllers/favorites_controller.rb:19:in `destroy'
+Started DELETE "/favorites/82" for ::1 at 2021-03-02 16:59:16 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"82", "favorite"=>{}}
+  [1m[36mFavorite Load (1.0ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+Completed 404 Not Found in 28ms (ActiveRecord: 1.0ms | Allocations: 187364)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Favorite with 'id'=82):
+  
+app/controllers/favorites_controller.rb:19:in `destroy'
+Started POST "/favorites" for ::1 at 2021-03-02 16:59:20 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>3, "exercise_id"=>82, "favorite"=>{"user_id"=>3, "exercise_id"=>82}}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (1.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mFavorite Create (1.9ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["exercise_id", 82], ["created_at", "2021-03-02 23:59:20.566796"], ["updated_at", "2021-03-02 23:59:20.566796"]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 304ms (Views: 9.4ms | ActiveRecord: 7.9ms | Allocations: 2244226)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 16:59:44 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (4.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 648ms (Views: 630.7ms | ActiveRecord: 4.1ms | Allocations: 4591703)
+
+
+Started POST "/login" for ::1 at 2021-03-02 16:59:48 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kitkat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mExercise Load (5.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" INNER JOIN "favorites" ON "exercises"."id" = "favorites"."exercise_id" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:8:in `login'
+Completed 200 OK in 145ms (Views: 109.4ms | ActiveRecord: 6.3ms | Allocations: 940970)
+
+
+Started DELETE "/favorites/82" for ::1 at 2021-03-02 17:00:22 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"82", "favorite"=>{}}
+  [1m[36mFavorite Load (1.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."exercise_id" = ? LIMIT ?[0m  [["exercise_id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+  [1m[36mFavorite Destroy (3.5ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+Completed 200 OK in 113ms (Views: 2.0ms | ActiveRecord: 18.5ms | Allocations: 1093493)
+
+
+Started DELETE "/favorites/82" for ::1 at 2021-03-02 17:00:28 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"82", "favorite"=>{}}
+  [1m[36mFavorite Load (1.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."exercise_id" = ? LIMIT ?[0m  [["exercise_id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+  [1m[36mFavorite Destroy (3.1ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+Completed 200 OK in 46ms (Views: 7.1ms | ActiveRecord: 4.3ms | Allocations: 380646)
+
+
+Started DELETE "/favorites/82" for ::1 at 2021-03-02 17:00:32 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"82", "favorite"=>{}}
+  [1m[36mFavorite Load (1.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."exercise_id" = ? LIMIT ?[0m  [["exercise_id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+  [1m[36mFavorite Destroy (3.3ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+Completed 200 OK in 49ms (Views: 10.1ms | ActiveRecord: 4.5ms | Allocations: 380646)
+
+
+Started DELETE "/favorites/82" for ::1 at 2021-03-02 17:00:33 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"82", "favorite"=>{}}
+  [1m[36mFavorite Load (0.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."exercise_id" = ? LIMIT ?[0m  [["exercise_id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 0.9ms | Allocations: 1363894)
+
+
+  
+NoMethodError (undefined method `delete' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:20:in `destroy'
+Started DELETE "/favorites/82" for ::1 at 2021-03-02 17:00:34 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"82", "favorite"=>{}}
+  [1m[36mFavorite Load (0.8ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."exercise_id" = ? LIMIT ?[0m  [["exercise_id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 0.8ms | Allocations: 1363891)
+
+
+  
+NoMethodError (undefined method `delete' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:20:in `destroy'
+Started DELETE "/favorites/83" for ::1 at 2021-03-02 17:00:37 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"83", "favorite"=>{}}
+  [1m[36mFavorite Load (0.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."exercise_id" = ? LIMIT ?[0m  [["exercise_id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+  [1m[36mFavorite Destroy (3.0ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+Completed 200 OK in 48ms (Views: 8.1ms | ActiveRecord: 3.9ms | Allocations: 380645)
+
+
+Started DELETE "/favorites/82" for ::1 at 2021-03-02 17:00:40 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"82", "favorite"=>{}}
+  [1m[36mFavorite Load (9.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."exercise_id" = ? LIMIT ?[0m  [["exercise_id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 9.4ms | Allocations: 1363892)
+
+
+  
+NoMethodError (undefined method `delete' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:20:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (1.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/exercises" for ::1 at 2021-03-02 17:01:39 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (2.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 643ms (Views: 589.6ms | ActiveRecord: 8.5ms | Allocations: 5852244)
+
+
+Started POST "/users" for ::1 at 2021-03-02 17:01:45 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"kitkat", "password"=>"[FILTERED]", "user"=>{"username"=>"kitkat", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "kitkat"], ["password", "pw"], ["created_at", "2021-03-03 00:01:45.699228"], ["updated_at", "2021-03-03 00:01:45.699228"]]
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  [1m[36mFavorite Load (1.0ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 200 OK in 176ms (Views: 50.0ms | ActiveRecord: 8.0ms | Allocations: 1850979)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 17:02:54 -0700
+Processing by ExercisesController#index as */*
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+  [1m[36mExercise Load (8.8ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 706ms (Views: 665.9ms | ActiveRecord: 41.0ms | Allocations: 6209050)
+
+
+Started POST "/users" for ::1 at 2021-03-02 17:03:01 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"kit", "password"=>"[FILTERED]", "user"=>{"username"=>"kit", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "kit"], ["password", "pw"], ["created_at", "2021-03-03 00:03:01.498308"], ["updated_at", "2021-03-03 00:03:01.498308"]]
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:23:in `create'
+Completed 200 OK in 129ms (Views: 2.1ms | ActiveRecord: 14.2ms | Allocations: 1360736)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 17:03:21 -0700
+Processing by ExercisesController#index as */*
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+  [1m[36mExercise Load (9.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 751ms (Views: 692.5ms | ActiveRecord: 23.4ms | Allocations: 6209061)
+
+
+Started POST "/users" for ::1 at 2021-03-02 17:03:27 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"sam", "password"=>"[FILTERED]", "user"=>{"username"=>"sam", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "sam"], ["password", "pw"], ["created_at", "2021-03-03 00:03:27.672247"], ["updated_at", "2021-03-03 00:03:27.672247"]]
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:23:in `create'
+Completed 200 OK in 156ms (Views: 3.8ms | ActiveRecord: 11.8ms | Allocations: 1580671)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 17:03:33 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>8, "exercise_id"=>83, "favorite"=>{"user_id"=>8, "exercise_id"=>83}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (1.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mFavorite Create (6.1ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 8], ["exercise_id", 83], ["created_at", "2021-03-03 00:03:34.248618"], ["updated_at", "2021-03-03 00:03:34.248618"]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 288ms (Views: 9.5ms | ActiveRecord: 23.5ms | Allocations: 2369777)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 17:03:38 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (8.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 766ms (Views: 747.9ms | ActiveRecord: 8.5ms | Allocations: 4584635)
+
+
+Started POST "/login" for ::1 at 2021-03-02 17:03:42 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"sam", "password"=>"[FILTERED]", "user"=>{"username"=>"sam", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mExercise Load (5.9ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" INNER JOIN "favorites" ON "exercises"."id" = "favorites"."exercise_id" WHERE "favorites"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:8:in `login'
+Completed 200 OK in 164ms (Views: 114.1ms | ActiveRecord: 7.0ms | Allocations: 1142838)
+
+
+Started DELETE "/favorites/83" for ::1 at 2021-03-02 17:03:47 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"83", "favorite"=>{}}
+  [1m[36mFavorite Load (1.0ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."exercise_id" = ? LIMIT ?[0m  [["exercise_id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+  [1m[36mFavorite Destroy (14.5ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+Completed 200 OK in 104ms (Views: 3.5ms | ActiveRecord: 15.5ms | Allocations: 656357)
+
+
+Started GET "/exercises" for ::1 at 2021-03-02 17:03:50 -0700
+Processing by ExercisesController#index as */*
+  [1m[36mExercise Load (11.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:5:in `index'
+Completed 200 OK in 830ms (Views: 808.5ms | ActiveRecord: 11.6ms | Allocations: 4604065)
+
+
+Started POST "/login" for ::1 at 2021-03-02 17:03:55 -0700
+Processing by UsersController#login as JSON
+  Parameters: {"username"=>"sam", "password"=>"[FILTERED]", "user"=>{"username"=>"sam", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `login'
+  [1m[36mExercise Load (0.9ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" INNER JOIN "favorites" ON "exercises"."id" = "favorites"."exercise_id" WHERE "favorites"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:8:in `login'
+Completed 200 OK in 67ms (Views: 42.6ms | ActiveRecord: 7.1ms | Allocations: 649440)
+
+
