@@ -32,6 +32,21 @@ class App extends Component {
     this.setState({ favorites })
   }
 
+  removeFavorite = (exercise) => {
+    const favorites = this.state.favorites.filter(favorite => favorite !== exercise)
+    this.setState({ favorites })
+    fetch(`${backendURL}/favorites/${exercise.id}`, {
+      method: "DELETE",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      }
+    })
+      .then(response => response.json())
+      .then(console.log)
+  }
+
+
   addFavorite = (exercise) => {
     const foundFav = this.state.favorites.find(favorite => favorite === exercise)
     if(!foundFav){
@@ -45,7 +60,7 @@ class App extends Component {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          user_id: this.state.user_id,
+          user_id: this.state.user.user_id,
           exercise_id: exercise.id
         })
       })
@@ -59,7 +74,7 @@ class App extends Component {
       <div className="App">
         <Header setUser={this.setUser} set setFavorites={ this.setFavorites }/>
         { this.state.user 
-        ? <Body exercises={ this.state.exercises } favorites={ this.state.favorites } addFavorite={ this.addFavorite }/>
+        ? <Body exercises={ this.state.exercises } favorites={ this.state.favorites } addFavorite={ this.addFavorite } removeFavorite= { this.removeFavorite } />
         : null }
       
       </div>

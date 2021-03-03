@@ -1,5 +1,3 @@
-import { Component } from 'react'
-
 import LogInForm from '../Components/LogInForm'
 import Logo from '../Components/Logo'
 

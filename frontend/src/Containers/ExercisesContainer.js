@@ -7,7 +7,7 @@ export default function ExercisesContainer({ exercises, addFavorite }) {
 
     const displayCard = () => {
         return exercises.map(exercise => {
-            return <Card exercise={ exercise } key={ exercise.id } addFavorite={ addFavorite }/>
+            return <Card exercise={ exercise } key={ exercise.id } handleIT={ addFavorite }/>
         })
     }
 

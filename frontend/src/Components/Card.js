@@ -2,10 +2,10 @@ import React from 'react'
 
 import './Card.css'
 
-export default function Card({ exercise, addFavorite }) {
+export default function Card({ exercise, handleIT }) {
 
     const handleClick = () => {
-        addFavorite(exercise)
+        handleIT(exercise)
     }
 
     return (
