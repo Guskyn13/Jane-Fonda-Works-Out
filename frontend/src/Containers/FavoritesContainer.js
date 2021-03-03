@@ -12,8 +12,11 @@ export default function FavoritesContainer({ favorites, removeFavorite }) {
     }
 
     return (
-        <ul className="execises-container">
-            { displayCard() }
-        </ul>
+        <div className="favorites-container">
+            <h2>Favorites</h2>
+            <ul className="favorites-ul">
+                { displayCard() }
+            </ul>
+        </div>
     )
 }

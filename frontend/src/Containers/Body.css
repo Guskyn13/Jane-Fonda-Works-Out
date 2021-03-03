@@ -1,4 +1,6 @@
 .body {
     display: flex; 
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 3% 3%;
 }

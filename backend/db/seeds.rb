@@ -1,11 +1,7 @@
 
 gifs = [
-"https://media0.giphy.com/media/vwKp0DLW21fji/giphy.gif",
-"https://media1.giphy.com/media/10cylTGU0KcAsE/giphy.gif",
-   "https://media3.giphy.com/media/l2Jhx6TQ6P3WAnv8c/giphy.gif",
    "https://media.giphy.com/media/U8RXSRKv8uMPS/giphy.gif",
    "https://media.giphy.com/media/6Lt0PMyvjTX8c/giphy.gif",
-   "https://media.giphy.com/media/27c7PAUIqaaryrpxxP/giphy.gif",
    "https://media.giphy.com/media/RIXkKMH70J5A42oNt5/giphy.gif",
    "https://media.giphy.com/media/fPWJGmS8Qizy8/giphy.gif"
 ]
@@ -22,7 +18,7 @@ result["results"].map do |exercise|
    Exercise.create(
       name: exercise["name"],
       description: exercise["description"],
-      gif: gifs[rand(9)]
+      gif: gifs[rand(4)]
    )
 end
 # user1 = User.create(username: "Phil", password: "1234")
