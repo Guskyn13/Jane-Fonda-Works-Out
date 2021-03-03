@@ -3,6 +3,7 @@
   box-shadow: 0px 0px 10px 2px rgba(216, 213, 213, 0.493);
   word-wrap: break-word;
   width: 200px;
+  padding-bottom: 5px;
 }
 
 img {
