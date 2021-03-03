@@ -8,7 +8,8 @@ class LogInForm extends Component {
     state = {
         username: "",
         password: "",
-        sign_up: false
+        sign_up: false,
+        error: null
     }
 
     
@@ -29,9 +30,17 @@ class LogInForm extends Component {
             })
             .then(response => response.json())
             .then(result => {
-                console.log(result)
-                this.props.setUser(result.user)
-                this.props.setFavorites(result.favorites)
+                if(result.error){
+                    this.setState({ error: result.error })
+                } else {
+                    console.log(result)
+                    this.props.setUser(result.user)
+                    this.props.setFavorites(result.favorites)
+                    this.setState({
+                        username: "",
+                        password: ""
+                    })
+                }
             })
         } else {
             fetch(`${backendURL}/login`, {
@@ -47,9 +56,17 @@ class LogInForm extends Component {
             })
             .then(response => response.json())
             .then(result => {
-                console.log(result)
-                this.props.setUser(result.user)
-                this.props.setFavorites(result.favorites)
+                if(result.error){
+                    this.setState({ error: result.error })
+                } else {
+                    console.log(result)
+                    this.props.setUser(result.user)
+                    this.props.setFavorites(result.favorites)
+                    this.setState({
+                        username: "",
+                        password: ""
+                    })
+                }
             })
         }
     }
@@ -74,6 +91,7 @@ class LogInForm extends Component {
                 <input type="text" name="username" id="username" value={this.state.username} onChange={this.handleChange}/>
                 <label>Secret Password:</label>
                 <input type="password" name="password" id="password" value={this.state.password} onChange={this.handleChange}/>
+                {this.state.error ? <p>{this.state.error}</p> : null}
                 <input type="submit" value="ENTER"/>
                 {this.state.sign_up ? <button onClick={this.handleClick}>Log In</button> : <button onClick={this.handleClick}>Sign Up</button>}
             </form>

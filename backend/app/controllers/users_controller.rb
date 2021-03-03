@@ -7,10 +7,10 @@ class UsersController < ApplicationController
                 @favorites = @user.exercises
                 render json: { user: @user, favorites: @favorites}
             else 
-                render json: {error: "Wrong Password"}
+                render json: { error: "Wrong Password" }
             end
         else
-            render json:{error: "User Not Found"}
+            render json: { error: "User Not Found" }
         end
     end
 

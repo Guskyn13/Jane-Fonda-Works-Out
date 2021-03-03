@@ -16,8 +16,8 @@ class FavoritesController < ApplicationController
     end
 
     def destroy
-        @favorite = Favorite.find_by(exercise_id: params[:id])
-        @favorite.delete
+        @favorite = Favorite.where({ exercise_id: params[:id], user_id: params[:user_id] })
+        @favorite.destroy(@favorite[0].id)
         render json: {message: "Favorite Deleted"}
     end
 end

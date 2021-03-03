@@ -3,6 +3,7 @@ import Body from './Containers/Body'
 import { Component } from 'react'
 
 import Header from './Containers/Header';
+import Manifesto from './Containers/Manifesto';
 const backendURL = 'http://localhost:3000'
 
 class App extends Component {
@@ -10,7 +11,8 @@ class App extends Component {
   state = {
     user: "",
     exercises: [],
-    favorites: []
+    favorites: [],
+    open: false
   }
 
   componentDidMount() {
@@ -35,7 +37,7 @@ class App extends Component {
   removeFavorite = (exercise) => {
     const favorites = this.state.favorites.filter(favorite => favorite !== exercise)
     this.setState({ favorites })
-    fetch(`${backendURL}/favorites/${exercise.id}`, {
+    fetch(`${backendURL}/favorites/${exercise.id}?user_id=${this.state.user.user_id}`, {
       method: "DELETE",
       headers: {
         Accept: "application/json",
@@ -69,10 +71,20 @@ class App extends Component {
     }
   }
 
+  openSesame = () => {
+    this.setState({
+      open: true
+    })
+  }
+
+
   render() {
     return (
       <div className="App">
-        <Header setUser={this.setUser} set setFavorites={ this.setFavorites }/>
+        { !this.state.open 
+        ? <Manifesto openSesame={this.openSesame}/> 
+        : <Header setUser={this.setUser} set setFavorites={ this.setFavorites }/> }
+        {/* <Header setUser={this.setUser} set setFavorites={ this.setFavorites }/> */}
         { this.state.user 
         ? <Body exercises={ this.state.exercises } favorites={ this.state.favorites } addFavorite={ this.addFavorite } removeFavorite= { this.removeFavorite } />
         : null }
