@@ -3123,3 +3123,77 @@ Processing by UsersController#login as JSON
 Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 2097)
 
 
+Started DELETE "/favorites/202" for ::1 at 2021-03-02 17:48:04 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"202", "favorite"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."exercise_id" = ? LIMIT ?[0m  [["exercise_id", 202], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+  [1m[36mFavorite Destroy (1.7ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 23]]
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 1489)
+
+
+Started DELETE "/favorites/203" for ::1 at 2021-03-02 17:48:05 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"203", "favorite"=>{}}
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."exercise_id" = ? LIMIT ?[0m  [["exercise_id", 203], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+  [1m[36mFavorite Destroy (1.8ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 24]]
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 895)
+
+
+Started DELETE "/favorites/204" for ::1 at 2021-03-02 17:48:06 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"204", "favorite"=>{}}
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."exercise_id" = ? LIMIT ?[0m  [["exercise_id", 204], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+  [1m[36mFavorite Destroy (1.7ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 25]]
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 894)
+
+
+Started DELETE "/favorites/205" for ::1 at 2021-03-02 17:48:07 -0700
+Processing by FavoritesController#destroy as JSON
+  Parameters: {"id"=>"205", "favorite"=>{}}
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."exercise_id" = ? LIMIT ?[0m  [["exercise_id", 205], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+  [1m[36mFavorite Destroy (1.9ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 26]]
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 893)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 17:48:08 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>13, "exercise_id"=>202, "favorite"=>{"user_id"=>13, "exercise_id"=>202}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 202], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mFavorite Create (0.6ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 13], ["exercise_id", 202], ["created_at", "2021-03-03 00:48:08.477277"], ["updated_at", "2021-03-03 00:48:08.477277"]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 3335)
+
+
+Started POST "/favorites" for ::1 at 2021-03-02 17:48:34 -0700
+Processing by FavoritesController#create as JSON
+  Parameters: {"user_id"=>13, "exercise_id"=>203, "favorite"=>{"user_id"=>13, "exercise_id"=>203}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mFavorite Create (0.6ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 13], ["exercise_id", 203], ["created_at", "2021-03-03 00:48:35.005770"], ["updated_at", "2021-03-03 00:48:35.005770"]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 3303)
+
+
