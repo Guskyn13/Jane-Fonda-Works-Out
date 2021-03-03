@@ -1,7 +1,11 @@
-.execises-container {
+.exercises-container {
+    max-width: 65%
+}
+
+.exercises-ul {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     flex-flow: row wrap;
-    list-style-type: none
+    list-style-type: none;
 }

@@ -12,8 +12,11 @@ export default function ExercisesContainer({ exercises, addFavorite }) {
     }
 
     return (
-        <ul className="execises-container">
-            { displayCard() }
-        </ul>
+        <div className="exercises-container">
+            <h2>Exercises</h2>
+            <ul className="exercises-ul">
+                { displayCard() }
+            </ul>
+        </div>
     )
 }
